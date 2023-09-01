@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "G:/ProjectCode/DataStruct/src/SeqList.c" "CMakeFiles/date_struct.dir/src/SeqList.c.obj" "gcc" "CMakeFiles/date_struct.dir/src/SeqList.c.obj.d"
-  "G:/ProjectCode/DataStruct/src/main_test.c" "CMakeFiles/date_struct.dir/src/main_test.c.obj" "gcc" "CMakeFiles/date_struct.dir/src/main_test.c.obj.d"
+  "D:/Vscode/dataSA/src/SeqList.c" "CMakeFiles/date_struct.dir/src/SeqList.c.obj" "gcc" "CMakeFiles/date_struct.dir/src/SeqList.c.obj.d"
+  "D:/Vscode/dataSA/src/main.c" "CMakeFiles/date_struct.dir/src/main.c.obj" "gcc" "CMakeFiles/date_struct.dir/src/main.c.obj.d"
+  "D:/Vscode/dataSA/src/main_test.c" "CMakeFiles/date_struct.dir/src/main_test.c.obj" "gcc" "CMakeFiles/date_struct.dir/src/main_test.c.obj.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

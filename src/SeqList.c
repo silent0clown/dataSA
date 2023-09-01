@@ -54,7 +54,7 @@ unsigned int GetSeqListNum(SeqList List){
 }
 
 // 获取第i个位置的元素值保存到Elem
-RET_STATUS GetSeqListElem(SeqList List, int i, ElemType* Elem){
+RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem){
     if(i < 1 || i > List.uiStoreNum){
         return RET_PARA_FAIL;
     }
@@ -67,7 +67,7 @@ RET_STATUS GetSeqListElem(SeqList List, int i, ElemType* Elem){
 }
 
 // 在顺序表中第i个位置插入元素Elem
-RET_STATUS InsertSeqListElem(SeqList* List, int i, ElemType Elem){
+RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem){
     CHECK_NULL_RETURN_VALUE(List, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(List->puiElem, RET_PARA_NULL);
 

@@ -1,8 +1,36 @@
 #1.cmake verson，指定cmake版本
 cmake_minimum_required(VERSION 3.2)
+# Version字段来自project配置 major.minor.patch.tweak
+project(DataAlgorithms VERSION 1.0.0 LANGUAGES C CXX DESCRIPTION "Data_Algorithms")
 
-#2.project name，指定项目的名称，一般和项目的文件夹名称对应
-PROJECT(date_struct)
+# 配置自动生成版本头文件，将头文件版本号定义成对应的宏，或者定义成接口，方便在代码运行的时候了解当前的版本号
+# CMAKE_、_CMAKE或者以下划线开头后面加上任意CMake命令的变量名都是CMake保留的
+configure_file(include/cmake_dsa_version.h.in "${PROJECT_SOURCE_DIR}/include/cmake_dsa_version.h")
+
+# 指定编译语言C/C++ 版本
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
+##--------------------- Compile Options ------------------------------------##
+# Configure compile options
+add_compile_options(-Wall -Wextra -pedantic -Werror)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pipe -std=c99 -Wno-error=unused-value")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pipe -std=c++11")
+
+# 四、配置编译类型
+set(CMAKE_BUILD_TYPE Debug)
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+
+# Compile options for Debug variant
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -O0")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
+
+# Compile options for Release variant
+set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O2")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
+
+message(STATUS "Compile options for c: ${CMAKE_C_FLAGS}")
+message(STATUS "Compile options for c++: ${CMAKE_CXX_FLAGS}")
 
 #3.head file path，头文件目录
 INCLUDE_DIRECTORIES(
@@ -22,22 +50,6 @@ ADD_EXECUTABLE(${PROJECT_NAME} ${TEST_MATH})
 
 #7.add link library，添加可执行文件所需要的库，比如我们用到了libm.so（命名规则：lib+name+.so），就添加该库的名称
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} m)
-
-# # 一、设置项目版本和生成version.h
-# cmake_minimum_required(VERSION 3.10)   # version
-
-# # Version字段来自project配置 major.minor.patch.tweak
-# project(DataAlgorithms VERSION 1.0.0 LANGUAGES C CXX DESCRIPTION "Data_Algorithms")
-
-# # 配置自动生成版本头文件，将头文件版本号定义成对应的宏，或者定义成接口，方便在代码运行的时候了解当前的版本号
-# configure_file(include/cmake_dsa_version.h.in "${PROJECT_SOURCE_DIR}/include/cmake_dsa_version.h")
-
-# # CMAKE_、_CMAKE或者以下划线开头后面加上任意CMake命令的变量名都是CMake保留的
-
-
-# # 二、指定编译语言C/C++ 版本
-# set(CMAKE_C_STANDARD 99)
-# set(CMAKE_CXX_STANDARD 11)
 
 
 # ##--------------------- Compile Options ------------------------------------##

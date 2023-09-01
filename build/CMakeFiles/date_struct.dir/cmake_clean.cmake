@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/date_struct.dir/src/SeqList.c.obj"
   "CMakeFiles/date_struct.dir/src/SeqList.c.obj.d"
+  "CMakeFiles/date_struct.dir/src/main.c.obj"
+  "CMakeFiles/date_struct.dir/src/main.c.obj.d"
   "CMakeFiles/date_struct.dir/src/main_test.c.obj"
   "CMakeFiles/date_struct.dir/src/main_test.c.obj.d"
   "date_struct.exe"

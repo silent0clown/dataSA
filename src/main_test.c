@@ -15,7 +15,7 @@ void test_InitSeqList()
     /* 若要传入指针，需要二级指针且改写函数 */
     ret = InitSeqList(&SeqList);
     if(ret == RET_SUCCESS && SeqList.puiElem != NULL){
-        printf("[MAIN TEST] ptr elem is %s\n", SeqList.puiElem);
+        printf("[MAIN TEST] ptr elem is %n\n", SeqList.puiElem);
         printf("[MAIN TEST] ptr total size is %d\n", SeqList.uiTotalNum);
         printf("[MAIN TEST] ptr have elem is %d\n", SeqList.uiStoreNum);
     }
@@ -47,7 +47,7 @@ int main()
     /* 若要传入指针，需要二级指针且改写函数 */
     ret = InitSeqList(&SeqList);
     if(ret == RET_SUCCESS && SeqList.puiElem != NULL){
-        printf("[MAIN TEST] ptr elem is %s\n", SeqList.puiElem);
+        printf("[MAIN TEST] ptr elem is %n\n", SeqList.puiElem);
         printf("[MAIN TEST] ptr total size is %d\n", SeqList.uiTotalNum);
         printf("[MAIN TEST] ptr have elem is %d\n", SeqList.uiStoreNum);
     }

@@ -1,14 +1,24 @@
 CMakeFiles/date_struct.dir/src/SeqList.c.obj: \
- G:\ProjectCode\DataStruct\src\SeqList.c \
- G:/ProjectCode/DataStruct/include/SeqList.h c:\mingw\include\stdio.h \
- c:\mingw\include\_mingw.h c:\mingw\include\msvcrtver.h \
- c:\mingw\include\w32api.h c:\mingw\include\sdkddkver.h \
- c:\mingw\include\features.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stddef.h \
- c:\mingw\include\sys/types.h \
- c:\mingw\lib\gcc\mingw32\9.2.0\include\stdarg.h \
- c:\mingw\include\stdlib.h c:\mingw\include\errno.h \
- c:\mingw\include\alloca.h c:\mingw\include\string.h \
- c:\mingw\include\strings.h c:\mingw\include\wchar.h \
- G:/ProjectCode/DataStruct/include/define.h \
- G:/ProjectCode/DataStruct/include/Status.h
+ D:\Vscode\dataSA\src\SeqList.c D:/Vscode/dataSA/include/SeqList.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw_print_push.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/PROGRA~1/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
+ C:/PROGRA~1/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/PROGRA~1/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/Vscode/dataSA/include/define.h D:/Vscode/dataSA/include/Status.h

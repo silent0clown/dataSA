@@ -31,10 +31,10 @@ RET_STATUS FreeSeqList(SeqList* List);
 
 RET_STATUS ClearSeqList(SeqList* List);
 
-RET_STATUS InsertSeqListElem(SeqList* List, int i, ElemType Elem);
+RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem);
 
 unsigned int GetSeqListNum(SeqList List);
 
-RET_STATUS GetSeqListElem(SeqList List, int i, ElemType* Elem);
+RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
 
 #endif
