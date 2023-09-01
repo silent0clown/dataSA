@@ -84,15 +84,6 @@ int main()
         printf(" %d", value);
     }
     printf(" \n");
-    // if(ret == RET_SUCCESS){
-    //     printf("[TEST LOOKUP] Lookup value is :");
-    //     for(int i = 0; i < INSERT_LIST_ELEMNUM; i++){
-    //         printf(" %d",lookup[i]);
-    //     }
-    //     printf("\n");
-        
-    // }
-
 
     // 释放内存
     ret = FreeSeqList(&SeqList);
