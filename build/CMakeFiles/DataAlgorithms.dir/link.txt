@@ -1,3 +1,0 @@
-"C:\Program Files\cmake-3.20.0-rc1-windows-x86_64\bin\cmake.exe" -E rm -f CMakeFiles\DataAlgorithms.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\DataAlgorithms.dir/objects.a @CMakeFiles\DataAlgorithms.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\gcc.exe  -pipe -std=c99 -Wno-error=unused-value -g -g -O0 -Wl,--whole-archive CMakeFiles\DataAlgorithms.dir/objects.a -Wl,--no-whole-archive -o DataAlgorithms.exe -Wl,--out-implib,libDataAlgorithms.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DataAlgorithms.dir\linklibs.rsp

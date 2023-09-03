@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarseqlist.a CMakeFiles/arseqlist.dir/SeqList.c.o
+/usr/bin/ranlib libarseqlist.a

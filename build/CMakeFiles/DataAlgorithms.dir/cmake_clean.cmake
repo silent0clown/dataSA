@@ -1,8 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DataAlgorithms.dir/src/SeqList.c.obj"
-  "CMakeFiles/DataAlgorithms.dir/src/SeqList.c.obj.d"
-  "CMakeFiles/DataAlgorithms.dir/src/main.c.obj"
-  "CMakeFiles/DataAlgorithms.dir/src/main.c.obj.d"
   "CMakeFiles/DataAlgorithms.dir/src/main_test.c.obj"
   "CMakeFiles/DataAlgorithms.dir/src/main_test.c.obj.d"
   "DataAlgorithms.exe"

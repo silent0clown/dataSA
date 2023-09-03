@@ -1,3 +1,8 @@
 D:/Vscode/dataSA/build/CMakeFiles/DataAlgorithms.dir
+D:/Vscode/dataSA/build/CMakeFiles/Algorithms.dir
+D:/Vscode/dataSA/build/CMakeFiles/install/local.dir
+D:/Vscode/dataSA/build/CMakeFiles/install.dir
 D:/Vscode/dataSA/build/CMakeFiles/edit_cache.dir
 D:/Vscode/dataSA/build/CMakeFiles/rebuild_cache.dir
+D:/Vscode/dataSA/build/CMakeFiles/list_install_components.dir
+D:/Vscode/dataSA/build/CMakeFiles/install/strip.dir

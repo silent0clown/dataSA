@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "SeqList.h"
+#include "SeqList/SeqList.h"
 
 
 # define INSERT_LIST_ELEMNUM (5)

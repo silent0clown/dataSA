@@ -1,3 +1,0 @@
-"C:\Program Files\cmake-3.20.0-rc1-windows-x86_64\bin\cmake.exe" -E rm -f CMakeFiles\date_struct.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe cr CMakeFiles\date_struct.dir/objects.a @CMakeFiles\date_struct.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\date_struct.dir/objects.a -Wl,--no-whole-archive -o date_struct.exe -Wl,--out-implib,libdate_struct.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\date_struct.dir\linklibs.rsp

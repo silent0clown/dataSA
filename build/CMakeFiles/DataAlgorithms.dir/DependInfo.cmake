@@ -8,13 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Vscode/dataSA/src/SeqList.c" "CMakeFiles/DataAlgorithms.dir/src/SeqList.c.obj" "gcc" "CMakeFiles/DataAlgorithms.dir/src/SeqList.c.obj.d"
-  "D:/Vscode/dataSA/src/main.c" "CMakeFiles/DataAlgorithms.dir/src/main.c.obj" "gcc" "CMakeFiles/DataAlgorithms.dir/src/main.c.obj.d"
   "D:/Vscode/dataSA/src/main_test.c" "CMakeFiles/DataAlgorithms.dir/src/main_test.c.obj" "gcc" "CMakeFiles/DataAlgorithms.dir/src/main_test.c.obj.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "D:/Vscode/dataSA/build/CMakeFiles/Algorithms.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
