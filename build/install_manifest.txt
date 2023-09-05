@@ -1,2 +1,0 @@
-D:/Vscode/dataSA/output/Release/lib/libAlgorithms.a
-D:/Vscode/dataSA/output/Release/bin/DataAlgorithms.exe

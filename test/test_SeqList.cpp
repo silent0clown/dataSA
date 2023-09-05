@@ -20,3 +20,8 @@ TEST(TestSeqList, test_Init_SeqList) {
     ret = FreeSeqList(&SeqList);
     EXPECT_EQ(ret, RET_SUCCESS);
 }
+
+TEST(TestSeqList, test_Init_SeqList_2) {
+
+    EXPECT_EQ(1, 1);
+}

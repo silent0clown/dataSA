@@ -3,6 +3,10 @@
 #ifndef SEQLIST_H
 #define SEQLIST_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -36,5 +40,10 @@ RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem);
 unsigned int GetSeqListNum(SeqList List);
 
 RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
+
+#ifdef __cplusplus
+}
+#endif
+
 
 #endif

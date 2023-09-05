@@ -1,2 +1,0 @@
-"C:/Program Files/mingw64/bin/ar.exe" qc libAlgorithms.a CMakeFiles/Algorithms.dir/src/SeqList.c.obj
-"C:/Program Files/mingw64/bin/ranlib.exe" libAlgorithms.a

@@ -86,10 +86,10 @@ RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem){
     // 需将i后的元素往后移动，共需移动 List->uiStoreNum - (i - 1) 个元素
     ElemLength iLoopTime = List->uiStoreNum;
 
-    for(iLoopTime; iLoopTime >= i; iLoopTime--){
+    while(iLoopTime >= i){
         List->puiElem[iLoopTime] = List->puiElem[iLoopTime - 1];
+        iLoopTime--;
     }
-
 
     /* 以下代码可以提高效率，但是需要调试 */
     // for(iLoopTime; iLoopTime > i; iLoopTime -= 2){

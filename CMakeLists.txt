@@ -59,6 +59,7 @@ if (USE_IMPORTED_LIB)
     add_subdirectory(src/SeqList)
 else()
     # Build  lib
+    # 加入子模块
     add_subdirectory(src/SeqList)
 #     add_subdirectory(src/c/nn)
 endif()
@@ -78,7 +79,7 @@ set_target_properties(merge PROPERTIES
 add_executable(proc src/main_test.c)
 target_link_libraries(proc PRIVATE merge)
 
-##--------------------- Build unit tests -----------------------------------##
+#--------------------- Build unit tests -----------------------------------##
 option(CMAKE_TEMPLATE_ENABLE_TEST "Whether to enable unit tests" ON)
 if (CMAKE_TEMPLATE_ENABLE_TEST)
     message(STATUS "Unit tests enabled")
@@ -86,7 +87,8 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     add_subdirectory(third_party/googletest-main EXCLUDE_FROM_ALL)
     include_directories(third_party/googletest-main/googletest/include)
 
-    add_executable(test_SeqList test/test_SeqList.cpp)
-    target_link_libraries(test_SeqList arseqlist gtest gtest_main)
-    add_test(NAME test_SeqList COMMAND test_SeqList)
+    add_executable(test_demo test/test_SeqList.cpp)
+    target_link_libraries(test_demo gtest gtest_main)
+    # target_link_libraries(test_demo arseqlist gtest gtest_main)
+    add_test(NAME test_demo COMMAND test_SeqList)
 endif()

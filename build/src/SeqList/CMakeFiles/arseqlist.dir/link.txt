@@ -1,0 +1,2 @@
+C:/mingw64/bin/ar.exe qc libarseqlist.a CMakeFiles/arseqlist.dir/SeqList.c.obj
+C:/mingw64/bin/ranlib.exe libarseqlist.a
