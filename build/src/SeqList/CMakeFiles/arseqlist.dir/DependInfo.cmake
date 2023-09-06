@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "G:/ProjectCode/dataSA/src/SeqList/SeqList.c" "src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.obj" "gcc" "src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.obj.d"
+  "/mnt/hgfs/Vscode/Ctest/dataSA/src/SeqList/SeqList.c" "src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o" "gcc" "src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

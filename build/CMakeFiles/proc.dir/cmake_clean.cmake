@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/proc.dir/src/main_test.c.obj"
-  "CMakeFiles/proc.dir/src/main_test.c.obj.d"
-  "libproc.dll.a"
-  "proc.exe"
-  "proc.exe.manifest"
+  "CMakeFiles/proc.dir/src/main_test.c.o"
+  "CMakeFiles/proc.dir/src/main_test.c.o.d"
+  "proc"
   "proc.pdb"
 )
 

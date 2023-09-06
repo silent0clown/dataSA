@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/arseqlist.dir/SeqList.c.obj"
-  "CMakeFiles/arseqlist.dir/SeqList.c.obj.d"
+  "CMakeFiles/arseqlist.dir/SeqList.c.o"
+  "CMakeFiles/arseqlist.dir/SeqList.c.o.d"
   "libarseqlist.a"
   "libarseqlist.pdb"
 )

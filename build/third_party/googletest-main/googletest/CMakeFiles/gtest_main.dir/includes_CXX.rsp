@@ -1,1 +1,0 @@
--IG:/ProjectCode/dataSA/include -IG:/ProjectCode/dataSA/src -isystem "G:/ProjectCode/dataSA/third_party/googletest-main/googletest/include" -isystem "G:/ProjectCode/dataSA/third_party/googletest-main/googletest"
