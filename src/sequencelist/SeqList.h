@@ -17,31 +17,31 @@ extern "C" {
 #define LIST_INIT_SIZE    100    // 顺序表初始大小
 #define LIST_INCREMENT    10     // 顺序表分配增量
 
-typedef int ElemType;
-typedef unsigned int ElemLength;
+typedef S_WORD32 ElemType;
+typedef WORD32 ElemLength;
 
 
 /* 顺序表结构 */
 typedef struct 
 {
-    ElemType* puiElem;      // 顺序表基地址
-    ElemLength  uiStoreNum;     // 当前表长
-    ElemLength  uiTotalNum;   // 表的总
+    S_WORD32* puiElem;      // 顺序表基地址
+    WORD32  uiStoreNum;     // 当前表长
+    WORD32  uiTotalNum;   // 表的总
 }SeqList;
 
-RET_STATUS InitSeqList(SeqList* List);
+WORD32 InitSeqList(SeqList* List);
 
-RET_STATUS FreeSeqList(SeqList* List);
+WORD32 FreeSeqList(SeqList* List);
 
-RET_STATUS ClearSeqList(SeqList* List);
+WORD32 ClearSeqList(SeqList* List);
 // 增
-RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem);
+WORD32 InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem);
 
 // 删
 
-unsigned int GetSeqListNum(SeqList List);
+WORD32 GetSeqListNum(SeqList List);
 // 查
-RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
+WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
 
 // 改
 /*

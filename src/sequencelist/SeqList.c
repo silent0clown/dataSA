@@ -1,7 +1,7 @@
 #include "SeqList.h"
 
 // 申请一个顺序表
-RET_STATUS InitSeqList(SeqList* List){
+WORD32 InitSeqList(SeqList* List){
     printf("Func InitSeqList Proc Begin\n");
 
     List->puiElem = (ElemType*)malloc(sizeof(ElemType) * LIST_INIT_SIZE);
@@ -22,7 +22,7 @@ RET_STATUS InitSeqList(SeqList* List){
 
 
 // 释放一个顺序表
-RET_STATUS FreeSeqList(SeqList* List){
+WORD32 FreeSeqList(SeqList* List){
     CHECK_NULL_RETURN_VALUE(List, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(List->puiElem, RET_PARA_NULL);
 
@@ -35,7 +35,7 @@ RET_STATUS FreeSeqList(SeqList* List){
 }
 
 // 清空顺序表中元素
-RET_STATUS ClearSeqList(SeqList* List){
+WORD32 ClearSeqList(SeqList* List){
     CHECK_NULL_RETURN_VALUE(List, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(List->puiElem, RET_PARA_NULL);
 
@@ -49,12 +49,12 @@ bool IsEmptySeqList(SeqList List){
     return List.uiStoreNum == 0 ? true : false;
 }
 
-unsigned int GetSeqListNum(SeqList List){
+WORD32 GetSeqListNum(SeqList List){
     return List.uiStoreNum;
 }
 
 // 获取第i个位置的元素值保存到Elem
-RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem){
+WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem){
     if(i < 1 || i > List.uiStoreNum){
         return RET_PARA_FAIL;
     }
@@ -67,7 +67,7 @@ RET_STATUS GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem){
 }
 
 // 在顺序表中第i个位置插入元素Elem
-RET_STATUS InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem){
+WORD32 InsertSeqListElem(SeqList* List, unsigned int i, ElemType Elem){
     CHECK_NULL_RETURN_VALUE(List, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(List->puiElem, RET_PARA_NULL);
 
