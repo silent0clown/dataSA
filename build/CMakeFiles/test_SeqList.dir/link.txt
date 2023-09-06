@@ -1,1 +1,1 @@
-/usr/bin/c++  -pipe -std=c++11 CMakeFiles/test_SeqList.dir/test/test_SeqList.cpp.o -o test_SeqList  src/SeqList/libarseqlist.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a -lpthread 
+/usr/bin/c++  -pipe -std=c++11 -g -g -O0 CMakeFiles/test_SeqList.dir/test/test_SeqList.cpp.o -o test_SeqList  src/SeqList/libarseqlist.a lib/libgtest.a lib/libgtest_main.a lib/libgtest.a -lpthread 

@@ -1,7 +1,6 @@
 src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o: \
- /mnt/hgfs/Vscode/Ctest/dataSA/src/SeqList/SeqList.c \
- /usr/include/stdc-predef.h \
- /mnt/hgfs/Vscode/Ctest/dataSA/src/SeqList/SeqList.h /usr/include/stdio.h \
+ /mnt/hgfs/Vscode/dataSA/src/SeqList/SeqList.c /usr/include/stdc-predef.h \
+ /mnt/hgfs/Vscode/dataSA/src/SeqList/SeqList.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -48,5 +47,5 @@ src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o: \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /mnt/hgfs/Vscode/Ctest/dataSA/include/define.h \
- /mnt/hgfs/Vscode/Ctest/dataSA/include/Status.h
+ /usr/include/strings.h /mnt/hgfs/Vscode/dataSA/include/define.h \
+ /mnt/hgfs/Vscode/dataSA/include/Status.h

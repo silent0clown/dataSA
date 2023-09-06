@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDEBUG -DREAL_COOL_ENGINEER
 
-CXX_INCLUDES = -I/mnt/hgfs/Vscode/Ctest/dataSA/include -I/mnt/hgfs/Vscode/Ctest/dataSA/src -I/mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googlemock/include -I/mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googlemock -isystem /mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googletest/include -isystem /mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googletest
+CXX_INCLUDES = -I/mnt/hgfs/Vscode/dataSA/include -I/mnt/hgfs/Vscode/dataSA/src -I/mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googlemock/include -I/mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googlemock -isystem /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest/include -isystem /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest
 
-CXX_FLAGS = -std=c++11 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -pedantic -Werror -std=c++14
+CXX_FLAGS = -std=c++11 -g -g -O0 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wall -Wextra -pedantic -Werror -std=c++14
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDEBUG -DREAL_COOL_ENGINEER
 
-CXX_INCLUDES = -I/mnt/hgfs/Vscode/Ctest/dataSA/include -I/mnt/hgfs/Vscode/Ctest/dataSA/src -isystem /mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googletest/include -isystem /mnt/hgfs/Vscode/Ctest/dataSA/third_party/googletest-main/googletest
+CXX_INCLUDES = -I/mnt/hgfs/Vscode/dataSA/include -I/mnt/hgfs/Vscode/dataSA/src -isystem /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest/include -isystem /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest
 
-CXX_FLAGS =  -pipe -std=c++11 -Wall -Wextra -pedantic -Werror -std=gnu++14
+CXX_FLAGS =  -pipe -std=c++11 -g -g -O0 -Wall -Wextra -pedantic -Werror -std=gnu++14
 

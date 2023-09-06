@@ -91,3 +91,21 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     target_link_libraries(test_SeqList arseqlist gtest gtest_main)
     add_test(NAME test_SeqList COMMAND test_SeqList)
 endif()
+
+##--------------------- Install and Package target -------------------------##
+# Install
+if (NOT USE_IMPORTED_LIB)
+    install(TARGETS arseqlist proc
+            RUNTIME DESTINATION bin
+            LIBRARY DESTINATION lib
+            ARCHIVE DESTINATION lib
+            PUBLIC_HEADER DESTINATION include)
+    file(GLOB_RECURSE DATASTRUCT_LIB_HEADERS src/SeqList/*.h)
+    install(FILES ${DATASTRUCT_LIB_HEADERS} DESTINATION include/SeqList)
+endif()
+
+# Package, These variables should set before including CPack module
+set(CPACK_GENERATOR "ZIP")
+set(CPACK_SET_DESTDIR ON)  # 支持指定安装目录
+set(CPACK_INSTALL_PREFIX "RealCoolEngineer")
+include(CPack)

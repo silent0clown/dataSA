@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/Vscode/Ctest/dataSA
+CMAKE_SOURCE_DIR = /mnt/hgfs/Vscode/dataSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/Vscode/Ctest/dataSA/build
+CMAKE_BINARY_DIR = /mnt/hgfs/Vscode/dataSA/build
 
 # Utility rule file for _merge.
 
@@ -69,8 +69,8 @@ include CMakeFiles/_merge.dir/progress.make
 CMakeFiles/_merge: libmerge.a
 
 libmerge.a: src/SeqList/libarseqlist.a
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/hgfs/Vscode/Ctest/dataSA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating libmerge.a"
-	ar crsT libmerge.a /mnt/hgfs/Vscode/Ctest/dataSA/build/src/SeqList/libarseqlist.a
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/hgfs/Vscode/dataSA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating libmerge.a"
+	ar crsT libmerge.a /mnt/hgfs/Vscode/dataSA/build/src/SeqList/libarseqlist.a
 
 _merge: CMakeFiles/_merge
 _merge: libmerge.a
@@ -86,6 +86,6 @@ CMakeFiles/_merge.dir/clean:
 .PHONY : CMakeFiles/_merge.dir/clean
 
 CMakeFiles/_merge.dir/depend:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/hgfs/Vscode/Ctest/dataSA /mnt/hgfs/Vscode/Ctest/dataSA /mnt/hgfs/Vscode/Ctest/dataSA/build /mnt/hgfs/Vscode/Ctest/dataSA/build /mnt/hgfs/Vscode/Ctest/dataSA/build/CMakeFiles/_merge.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/hgfs/Vscode/dataSA/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/hgfs/Vscode/dataSA /mnt/hgfs/Vscode/dataSA /mnt/hgfs/Vscode/dataSA/build /mnt/hgfs/Vscode/dataSA/build /mnt/hgfs/Vscode/dataSA/build/CMakeFiles/_merge.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_merge.dir/depend
 

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DDEBUG -DREAL_COOL_ENGINEER
 
-C_INCLUDES = -I/mnt/hgfs/Vscode/Ctest/dataSA/include -I/mnt/hgfs/Vscode/Ctest/dataSA/src
+C_INCLUDES = -I/mnt/hgfs/Vscode/dataSA/include -I/mnt/hgfs/Vscode/dataSA/src
 
-C_FLAGS =  -pipe -std=c99 -Wno-error=unused-value -Wall -Wextra -pedantic -Werror -std=gnu99
+C_FLAGS =  -pipe -std=c99 -Wno-error=unused-value -g -g -O0 -Wall -Wextra -pedantic -Werror -std=gnu99
 

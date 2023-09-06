@@ -1,5 +1,5 @@
 CMakeFiles/proc.dir/src/main_test.c.o: \
- /mnt/hgfs/Vscode/Ctest/dataSA/src/main_test.c /usr/include/stdc-predef.h \
+ /mnt/hgfs/Vscode/dataSA/src/main_test.c /usr/include/stdc-predef.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -18,8 +18,8 @@ CMakeFiles/proc.dir/src/main_test.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /mnt/hgfs/Vscode/Ctest/dataSA/src/SeqList/SeqList.h \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /mnt/hgfs/Vscode/dataSA/src/SeqList/SeqList.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
@@ -48,5 +48,5 @@ CMakeFiles/proc.dir/src/main_test.c.o: \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /mnt/hgfs/Vscode/Ctest/dataSA/include/define.h \
- /mnt/hgfs/Vscode/Ctest/dataSA/include/Status.h
+ /usr/include/strings.h /mnt/hgfs/Vscode/dataSA/include/define.h \
+ /mnt/hgfs/Vscode/dataSA/include/Status.h

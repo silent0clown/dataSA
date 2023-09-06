@@ -1,5 +1,5 @@
-libdir=/usr/local/lib/x86_64-linux-gnu
-includedir=/usr/local/include
+libdir=/mnt/hgfs/Vscode/dataSA/output/lib
+includedir=/mnt/hgfs/Vscode/dataSA/output/include
 
 Name: gtest_main
 Description: GoogleTest (with main() function)

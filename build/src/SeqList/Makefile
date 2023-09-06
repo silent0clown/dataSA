@@ -57,13 +57,33 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/Vscode/Ctest/dataSA
+CMAKE_SOURCE_DIR = /mnt/hgfs/Vscode/dataSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/Vscode/Ctest/dataSA/build
+CMAKE_BINARY_DIR = /mnt/hgfs/Vscode/dataSA/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /mnt/hgfs/Vscode/dataSA/build && /usr/local/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /mnt/hgfs/Vscode/dataSA/build && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /mnt/hgfs/Vscode/dataSA/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target test
 test:
@@ -97,7 +117,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"gmock\" \"gtest\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -142,14 +162,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Vscode/Ctest/dataSA/build/CMakeFiles /mnt/hgfs/Vscode/Ctest/dataSA/build/src/SeqList//CMakeFiles/progress.marks
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Vscode/Ctest/dataSA/build/CMakeFiles 0
+	cd /mnt/hgfs/Vscode/dataSA/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Vscode/dataSA/build/CMakeFiles /mnt/hgfs/Vscode/dataSA/build/src/SeqList//CMakeFiles/progress.marks
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/Vscode/dataSA/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/clean
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +178,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/preinstall
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/preinstall
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/hgfs/Vscode/dataSA/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/SeqList/CMakeFiles/arseqlist.dir/rule:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/CMakeFiles/arseqlist.dir/rule
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SeqList/CMakeFiles/arseqlist.dir/rule
 .PHONY : src/SeqList/CMakeFiles/arseqlist.dir/rule
 
 # Convenience name for target.
@@ -182,7 +202,7 @@ arseqlist: src/SeqList/CMakeFiles/arseqlist.dir/rule
 
 # fast build rule for target.
 arseqlist/fast:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/build
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/build
 .PHONY : arseqlist/fast
 
 SeqList.o: SeqList.c.o
@@ -190,7 +210,7 @@ SeqList.o: SeqList.c.o
 
 # target to build an object file
 SeqList.c.o:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.o
 .PHONY : SeqList.c.o
 
 SeqList.i: SeqList.c.i
@@ -198,7 +218,7 @@ SeqList.i: SeqList.c.i
 
 # target to preprocess a source file
 SeqList.c.i:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.i
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.i
 .PHONY : SeqList.c.i
 
 SeqList.s: SeqList.c.s
@@ -206,7 +226,7 @@ SeqList.s: SeqList.c.s
 
 # target to generate assembly for a file
 SeqList.c.s:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.s
+	cd /mnt/hgfs/Vscode/dataSA/build && $(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/SeqList.c.s
 .PHONY : SeqList.c.s
 
 # Help Target
@@ -220,6 +240,8 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... arseqlist"
@@ -237,6 +259,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/hgfs/Vscode/Ctest/dataSA/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/hgfs/Vscode/dataSA/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
