@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "SeqList/SeqList.h"
+#include "sequencelist/SeqList.h"
 #include "Status.h"
 
 # define INSERT_LIST_ELEMNUM (5)

@@ -56,11 +56,11 @@ if (USE_IMPORTED_LIB)
         IMPORTED_LOCATION_DEBUG "${LIB_DATAALGOR_DEBUG}"
         IMPORTED_CONFIGURATIONS "RELEASE;DEBUG"
     )
-    add_subdirectory(src/SeqList)
+    add_subdirectory(src/sequencelist)
 else()
     # Build  lib
     # 加入子模块
-    add_subdirectory(src/SeqList)
+    add_subdirectory(src/sequencelist)
 #     add_subdirectory(src/c/nn)
 endif()
 
@@ -76,7 +76,7 @@ set_target_properties(merge PROPERTIES
 )
 
 # Build demo executable
-add_executable(proc src/main_test.c)
+add_executable(proc src/main.c)
 target_link_libraries(proc PRIVATE merge)
 
 ##--------------------- Build unit tests -----------------------------------##
@@ -100,7 +100,7 @@ if (NOT USE_IMPORTED_LIB)
             LIBRARY DESTINATION lib
             ARCHIVE DESTINATION lib
             PUBLIC_HEADER DESTINATION include)
-    file(GLOB_RECURSE DATASTRUCT_LIB_HEADERS src/SeqList/*.h)
+    file(GLOB_RECURSE DATASTRUCT_LIB_HEADERS src/sequencelist/*.h)
     install(FILES ${DATASTRUCT_LIB_HEADERS} DESTINATION include/SeqList)
 endif()
 
