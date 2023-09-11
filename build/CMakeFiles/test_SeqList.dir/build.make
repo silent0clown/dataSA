@@ -92,7 +92,7 @@ test_SeqList_EXTERNAL_OBJECTS =
 
 test_SeqList: CMakeFiles/test_SeqList.dir/test/test_SeqList.cpp.o
 test_SeqList: CMakeFiles/test_SeqList.dir/build.make
-test_SeqList: src/SeqList/libarseqlist.a
+test_SeqList: src/sequencelist/libarseqlist.a
 test_SeqList: lib/libgtest.a
 test_SeqList: lib/libgtest_main.a
 test_SeqList: lib/libgtest.a

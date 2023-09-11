@@ -286,14 +286,15 @@ CMakeFiles/test_SeqList.dir/test/test_SeqList.cpp.o: ../test/test_SeqList.cpp \
   ../third_party/googletest-main/googletest/include/gtest/gtest-typed-test.h \
   ../third_party/googletest-main/googletest/include/gtest/gtest_pred_impl.h \
   ../third_party/googletest-main/googletest/include/gtest/gtest_prod.h \
-  ../src/SeqList/SeqList.h \
+  ../src/sequencelist/SeqList.h \
   ../include/define.h \
-  ../include/Status.h
+  ../include/Status.h \
+  ../include/define.h
 
 
 ../include/Status.h:
 
-../src/SeqList/SeqList.h:
+../src/sequencelist/SeqList.h:
 
 ../third_party/googletest-main/googletest/include/gtest/gtest_pred_impl.h:
 

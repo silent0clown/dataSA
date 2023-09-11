@@ -13,7 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/hgfs/Vscode/dataSA/build/src/SeqList/CMakeFiles/arseqlist.dir/DependInfo.cmake"
+  "/mnt/hgfs/Vscode/dataSA/build/src/sequencelist/CMakeFiles/arseqlist.dir/DependInfo.cmake"
   "/mnt/hgfs/Vscode/dataSA/build/third_party/googletest-main/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "/mnt/hgfs/Vscode/dataSA/build/third_party/googletest-main/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )

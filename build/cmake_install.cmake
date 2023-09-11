@@ -44,11 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/mnt/hgfs/Vscode/dataSA/build/src/SeqList/cmake_install.cmake")
+  include("/mnt/hgfs/Vscode/dataSA/build/src/sequencelist/cmake_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/hgfs/Vscode/dataSA/build/src/SeqList/libarseqlist.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/hgfs/Vscode/dataSA/build/src/sequencelist/libarseqlist.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -68,7 +68,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/SeqList" TYPE FILE FILES "/mnt/hgfs/Vscode/dataSA/src/SeqList/SeqList.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/SeqList" TYPE FILE FILES "/mnt/hgfs/Vscode/dataSA/src/sequencelist/SeqList.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

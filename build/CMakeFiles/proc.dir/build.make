@@ -69,28 +69,28 @@ include CMakeFiles/proc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/proc.dir/flags.make
 
-CMakeFiles/proc.dir/src/main_test.c.o: CMakeFiles/proc.dir/flags.make
-CMakeFiles/proc.dir/src/main_test.c.o: ../src/main_test.c
-CMakeFiles/proc.dir/src/main_test.c.o: CMakeFiles/proc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Vscode/dataSA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proc.dir/src/main_test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/proc.dir/src/main_test.c.o -MF CMakeFiles/proc.dir/src/main_test.c.o.d -o CMakeFiles/proc.dir/src/main_test.c.o -c /mnt/hgfs/Vscode/dataSA/src/main_test.c
+CMakeFiles/proc.dir/src/main.c.o: CMakeFiles/proc.dir/flags.make
+CMakeFiles/proc.dir/src/main.c.o: ../src/main.c
+CMakeFiles/proc.dir/src/main.c.o: CMakeFiles/proc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/Vscode/dataSA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proc.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/proc.dir/src/main.c.o -MF CMakeFiles/proc.dir/src/main.c.o.d -o CMakeFiles/proc.dir/src/main.c.o -c /mnt/hgfs/Vscode/dataSA/src/main.c
 
-CMakeFiles/proc.dir/src/main_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc.dir/src/main_test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/hgfs/Vscode/dataSA/src/main_test.c > CMakeFiles/proc.dir/src/main_test.c.i
+CMakeFiles/proc.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/hgfs/Vscode/dataSA/src/main.c > CMakeFiles/proc.dir/src/main.c.i
 
-CMakeFiles/proc.dir/src/main_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc.dir/src/main_test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/Vscode/dataSA/src/main_test.c -o CMakeFiles/proc.dir/src/main_test.c.s
+CMakeFiles/proc.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/Vscode/dataSA/src/main.c -o CMakeFiles/proc.dir/src/main.c.s
 
 # Object files for target proc
 proc_OBJECTS = \
-"CMakeFiles/proc.dir/src/main_test.c.o"
+"CMakeFiles/proc.dir/src/main.c.o"
 
 # External object files for target proc
 proc_EXTERNAL_OBJECTS =
 
-proc: CMakeFiles/proc.dir/src/main_test.c.o
+proc: CMakeFiles/proc.dir/src/main.c.o
 proc: CMakeFiles/proc.dir/build.make
 proc: libmerge.a
 proc: CMakeFiles/proc.dir/link.txt

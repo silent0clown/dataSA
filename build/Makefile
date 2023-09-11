@@ -240,7 +240,7 @@ arseqlist: cmake_check_build_system
 
 # fast build rule for target.
 arseqlist/fast:
-	$(MAKE) $(MAKESILENT) -f src/SeqList/CMakeFiles/arseqlist.dir/build.make src/SeqList/CMakeFiles/arseqlist.dir/build
+	$(MAKE) $(MAKESILENT) -f src/sequencelist/CMakeFiles/arseqlist.dir/build.make src/sequencelist/CMakeFiles/arseqlist.dir/build
 .PHONY : arseqlist/fast
 
 #=============================================================================
@@ -295,29 +295,29 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f third_party/googletest-main/googletest/CMakeFiles/gtest_main.dir/build.make third_party/googletest-main/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-src/main_test.o: src/main_test.c.o
-.PHONY : src/main_test.o
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/main_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main_test.c.o
-.PHONY : src/main_test.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-src/main_test.i: src/main_test.c.i
-.PHONY : src/main_test.i
+src/main.i: src/main.c.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-src/main_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main_test.c.i
-.PHONY : src/main_test.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-src/main_test.s: src/main_test.c.s
-.PHONY : src/main_test.s
+src/main.s: src/main.c.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main_test.c.s
-.PHONY : src/main_test.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 test/test_SeqList.o: test/test_SeqList.cpp.o
 .PHONY : test/test_SeqList.o
@@ -366,9 +366,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... proc"
 	@echo "... test_SeqList"
-	@echo "... src/main_test.o"
-	@echo "... src/main_test.i"
-	@echo "... src/main_test.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... test/test_SeqList.o"
 	@echo "... test/test_SeqList.i"
 	@echo "... test/test_SeqList.s"

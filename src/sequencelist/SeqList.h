@@ -13,21 +13,6 @@ extern "C" {
 #include "define.h"
 #include "Status.h"
 
-/* 宏定义 */
-#define LIST_INIT_SIZE    100    // 顺序表初始大小
-#define LIST_INCREMENT    10     // 顺序表分配增量
-
-typedef S_WORD32 ElemType;
-typedef WORD32 ElemLength;
-
-
-/* 顺序表结构 */
-typedef struct 
-{
-    S_WORD32* puiElem;      // 顺序表基地址
-    WORD32  uiStoreNum;     // 当前表长
-    WORD32  uiTotalNum;   // 表的总
-}SeqList;
 
 WORD32 InitSeqList(SeqList* List);
 
@@ -54,7 +39,7 @@ WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
  * 教材中i的含义是元素位置，从1开始计数，但这不符合编码的通用约定。
  * 通常，i的含义应该指索引，即从0开始计数。
  */
-// Status GetElem(SqList L, int i, ElemType* e);
+WORD32 dsa_GetElem(SeqList L, WORD32 i, ElemType* e);
 /*
  * ████████ 算法2.6 ████████
  *
@@ -66,7 +51,7 @@ WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
  *【备注】
  * 元素e是Compare函数第二个形参
  */
-// int LocateElem(SqList L, ElemType e, Status(Compare)(ElemType, ElemType));
+WORD32 dsa_LocateElem(SeqList L, ElemType e);
 
 /*
  * 前驱
@@ -75,7 +60,7 @@ WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
  * 如果存在，将其存储到pre_e中，返回OK，
  * 如果不存在，则返回ERROR。
  */
-// Status PriorElem(SqList L, ElemType cur_e, ElemType* pre_e);
+WORD32 dsa_PriorElem(SeqList L, ElemType cur_e, ElemType* pre_e);
 
 /*
  * 后继
@@ -84,7 +69,11 @@ WORD32 GetSeqListElem(SeqList List, unsigned int i, ElemType* Elem);
  * 如果存在，将其存储到next_e中，返回OK，
  * 如果不存在，则返回ERROR。
  */
-// Status NextElem(SqList L, ElemType cur_e, ElemType* next_e);
+WORD32 dsa_NextElem(SeqList L, ElemType cur_e, ElemType* next_e);
+
+WORD32 dsa_UnionSeqList(SeqList* L1, SeqList L2);
+
+WORD32 dsa_MergeSeqList(SeqList L1, SeqList L2, SeqList* L3);
 
 #ifdef __cplusplus
 }

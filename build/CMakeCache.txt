@@ -279,13 +279,13 @@ CMAKE_TEMPLATE_ENABLE_TEST:BOOL=ON
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-CMakeSeqList_BINARY_DIR:STATIC=/mnt/hgfs/Vscode/dataSA/build/src/SeqList
+CMakeSeqList_BINARY_DIR:STATIC=/mnt/hgfs/Vscode/dataSA/build/src/sequencelist
 
 //Value Computed by CMake
 CMakeSeqList_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-CMakeSeqList_SOURCE_DIR:STATIC=/mnt/hgfs/Vscode/dataSA/src/SeqList
+CMakeSeqList_SOURCE_DIR:STATIC=/mnt/hgfs/Vscode/dataSA/src/sequencelist
 
 //No help, variable specified on the command line.
 CPACK_OUTPUT_FILE_PREFIX:UNINITIALIZED=/mnt/hgfs/Vscode/dataSA/output

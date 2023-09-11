@@ -11,7 +11,7 @@ extern "C" {
 #define  MAX(x,y) ((x)>(y)) ? (x):(y))  
 #define  MIN(x,y) ((x)<(y)) ? (x):(y)) 
 
-#define    RET_ERROR      (-1)
+#define    RET_ERROR      (1)
 #define    RET_SUCCESS    (0)
 #define    RET_OVERFLOW   (9)
 #define    RET_PARA_NULL  (10)
@@ -44,26 +44,22 @@ typedef  long long           S_WORD64;       /* Signed 64 bit value type. */
   
 #define MYLOGO "[DEBUG INFO] "  
   
-#define FLAG_FILENAME    1  
+#define FLAG_FILENAME    0  
 #define FLAG_FUNCTION    1  
 #define FLAG_LINE        1
   
-#define DSA_PRINT_MSG(fmt,args...)               \  
-{                                                \  
-    if(DEBUGMSG_OPEN){                           \  
-        printf(MYLOGO);                          \  
-                                                 \  
-        if(FLAG_FILENAME)                        \  
-            printf("%s ",__FILE__);              \  
-                                                 \  
-        if(FLAG_FILENAME)                        \  
-            printf("%s ",__FUNCTION__);          \  
-                                                 \  
-        if(FLAG_FILENAME)                        \  
-            printf("%d: ",__LINE__);             \  
-                                                 \  
-        printf(fmt,##args);                      \  
-    }                                            \  
+#define DSA_PRINT_MSG(fmt, args...){            \
+if(DEBUGMSG_OPEN){                              \
+        printf(MYLOGO);                         \
+        if(FLAG_FILENAME)                       \
+            printf("%s ", __FILE__);            \
+        if(FLAG_FILENAME)                       \
+            printf("%s ", __FUNCTION__);        \
+        if(FLAG_FILENAME)                       \
+            printf("%d: ", __LINE__);           \
+        printf(fmt, ##args);                    \
+        printf("\n");                           \
+    }                                           \
 }  
 
 

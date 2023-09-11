@@ -287,7 +287,8 @@ CMakeFiles/test_SeqList.dir/test/test_SeqList.cpp.o
  /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest/include/gtest/gtest-typed-test.h
  /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest/include/gtest/gtest_pred_impl.h
  /mnt/hgfs/Vscode/dataSA/third_party/googletest-main/googletest/include/gtest/gtest_prod.h
- /mnt/hgfs/Vscode/dataSA/src/SeqList/SeqList.h
+ /mnt/hgfs/Vscode/dataSA/src/sequencelist/SeqList.h
  /mnt/hgfs/Vscode/dataSA/include/define.h
  /mnt/hgfs/Vscode/dataSA/include/Status.h
+ /mnt/hgfs/Vscode/dataSA/include/define.h
 

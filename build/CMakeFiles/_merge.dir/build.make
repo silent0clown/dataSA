@@ -68,9 +68,9 @@ include CMakeFiles/_merge.dir/progress.make
 
 CMakeFiles/_merge: libmerge.a
 
-libmerge.a: src/SeqList/libarseqlist.a
+libmerge.a: src/sequencelist/libarseqlist.a
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/hgfs/Vscode/dataSA/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating libmerge.a"
-	ar crsT libmerge.a /mnt/hgfs/Vscode/dataSA/build/src/SeqList/libarseqlist.a
+	ar crsT libmerge.a /mnt/hgfs/Vscode/dataSA/build/src/sequencelist/libarseqlist.a
 
 _merge: CMakeFiles/_merge
 _merge: libmerge.a

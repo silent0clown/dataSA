@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hgfs/Vscode/dataSA/src/main_test.c" "CMakeFiles/proc.dir/src/main_test.c.o" "gcc" "CMakeFiles/proc.dir/src/main_test.c.o.d"
+  "/mnt/hgfs/Vscode/dataSA/src/main.c" "CMakeFiles/proc.dir/src/main.c.o" "gcc" "CMakeFiles/proc.dir/src/main.c.o.d"
   )
 
 # Targets to which this target links.
