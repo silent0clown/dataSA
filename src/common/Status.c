@@ -1,6 +1,6 @@
 #include "Status.h"
 
-WORD32 itemCompareEqual(ElemType a, ElemType b){
+WORD32 itemCompareEqual(int a, int b){
     if(a == b){
         return RET_SUCCESS;
     }

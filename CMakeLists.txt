@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD 11)
 ##--------------------- Compile Options ------------------------------------##
 # Configure compile options
 add_compile_options(-Wall -Wextra -pedantic -Werror)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pipe -std=c99 -Wno-error=unused-value")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pipe -std=c99 -Wno-error=unused-value -Wno-error=unused-but-set-parameter")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pipe -std=c++11")
 
 # 四、配置编译类型
@@ -57,17 +57,19 @@ if (USE_IMPORTED_LIB)
         IMPORTED_CONFIGURATIONS "RELEASE;DEBUG"
     )
     add_subdirectory(src/sequencelist)
+    add_subdirectory(src/linerlinklist)
 else()
     # Build  lib
     # 加入子模块
     add_subdirectory(src/sequencelist)
+    add_subdirectory(src/linerlinklist)
 #     add_subdirectory(src/c/nn)
 endif()
 
 # merge library
 add_custom_command(OUTPUT libmerge.a
-COMMAND ar crsT libmerge.a $<TARGET_FILE:arseqlist> 
-DEPENDS arseqlist)
+COMMAND ar crsT libmerge.a $<TARGET_FILE:arseqlist> $<TARGET_FILE:arlinelinklist>
+DEPENDS arseqlist arlinelinklist)
 
 add_custom_target(_merge ALL DEPENDS libmerge.a)
 add_library(merge STATIC IMPORTED GLOBAL)
@@ -87,9 +89,11 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     add_subdirectory(third_party/googletest-main EXCLUDE_FROM_ALL)
     include_directories(third_party/googletest-main/googletest/include)
 
-    add_executable(test_SeqList test/test_SeqList.cpp)
-    target_link_libraries(test_SeqList arseqlist gtest gtest_main)
-    add_test(NAME test_SeqList COMMAND test_SeqList)
+    add_executable(test_LineList test/test_SeqList.cpp test/test_LinkList.cpp)
+    target_link_libraries(test_LineList arseqlist arlinelinklist gtest gtest_main)
+    add_test(NAME test_LineList COMMAND test_LineList)
+
+
 endif()
 
 ##--------------------- Install and Package target -------------------------##

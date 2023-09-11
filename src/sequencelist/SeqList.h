@@ -13,6 +13,21 @@ extern "C" {
 #include "define.h"
 #include "Status.h"
 
+/* 宏定义 */
+#define LIST_INIT_SIZE    100    // 顺序表初始大小
+#define LIST_INCREMENT    10     // 顺序表分配增量
+
+typedef S_WORD32 ElemType;
+typedef WORD32 ElemLength;
+
+
+/* 顺序表结构 */
+typedef struct 
+{
+    S_WORD32* puiElem;      // 顺序表基地址
+    WORD32  uiStoreNum;     // 当前表长
+    WORD32  uiTotalNum;   // 表的总
+}SeqList;
 
 WORD32 InitSeqList(SeqList* List);
 

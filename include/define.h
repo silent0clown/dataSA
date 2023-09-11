@@ -47,7 +47,10 @@ typedef  long long           S_WORD64;       /* Signed 64 bit value type. */
 #define FLAG_FILENAME    0  
 #define FLAG_FUNCTION    1  
 #define FLAG_LINE        1
-  
+
+ #define likely(x) __builtin_expect(!!(x), 1)
+ #define unlikely(x) __builtin_expect(!!(x), 0)
+
 #define DSA_PRINT_MSG(fmt, args...){            \
 if(DEBUGMSG_OPEN){                              \
         printf(MYLOGO);                         \
@@ -59,7 +62,7 @@ if(DEBUGMSG_OPEN){                              \
             printf("%d: ", __LINE__);           \
         printf(fmt, ##args);                    \
         printf("\n");                           \
-    }                                           \
+}                                               \
 }  
 
 
