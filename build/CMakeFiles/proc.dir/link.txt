@@ -1,1 +1,0 @@
-/usr/bin/cc  -pipe -std=c99 -Wno-error=unused-value -g -g -O0 CMakeFiles/proc.dir/src/main.c.o -o proc  libmerge.a 
