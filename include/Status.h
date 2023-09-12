@@ -12,12 +12,12 @@ extern "C" {
 
 #ifndef bool
 #define bool int
-#define true 0
-#define false -1
+#define true  1
+#define false 0
 #endif
 
 
-typedef int RET_STATUS;
+typedef unsigned int  RET_STATUS;
 
 WORD32 itemCompareEqual(int a, int b);
 

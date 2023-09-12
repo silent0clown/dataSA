@@ -7,7 +7,7 @@ extern "C" {
 
 
 #pragma GCC system_header   // 允许可变参数宏
-#define CHECK_NULL_RETURN_VALUE(PTR, VAL){if(NULL == PTR){return VAL;}}
+#define CHECK_NULL_RETURN_VALUE(PTR, VAL){if(NULL == (PTR)){return VAL;}}
 #define  MAX(x,y) ((x)>(y)) ? (x):(y))  
 #define  MIN(x,y) ((x)<(y)) ? (x):(y)) 
 
@@ -62,7 +62,7 @@ if(DEBUGMSG_OPEN){                              \
             printf("%d: ", __LINE__);           \
         printf(fmt, ##args);                    \
         printf("\n");                           \
-}                                               \
+    }                                           \
 }  
 
 
