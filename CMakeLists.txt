@@ -1,5 +1,5 @@
 #1.cmake verson，指定cmake版本
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.18.0)
 # Version字段来自project配置 major.minor.patch.tweak
 project(data_algorithms VERSION 1.0.0 LANGUAGES C CXX DESCRIPTION "Data_Algorithms")
 
@@ -89,7 +89,7 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     add_subdirectory(third_party/googletest-main EXCLUDE_FROM_ALL)
     include_directories(third_party/googletest-main/googletest/include)
 
-    add_executable(test_LineList test/test_SeqList.cpp test/test_LinkList.cpp)
+    add_executable(test_LineList test/test_SeqList.cpp test/test_LinkList.cpp test/test_doublelinklist.cpp)
     target_link_libraries(test_LineList arseqlist arlinelinklist gtest gtest_main)
     add_test(NAME test_LineList COMMAND test_LineList)
 

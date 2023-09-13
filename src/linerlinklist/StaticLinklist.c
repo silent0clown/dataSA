@@ -45,18 +45,18 @@ WORD32 dsa_InitStaticList(SLinkList space, WORD32* SL_node) {
 }
 
 
-WORD32 dsa_FreeStaticList(SLinkList space, WORD32* SL_node) {
-    CHECK_NULL_RETURN_VALUE(SL_node, RET_PARA_NULL);
+// WORD32 dsa_FreeStaticList(SLinkList space, WORD32* SL_node) {
+//     CHECK_NULL_RETURN_VALUE(SL_node, RET_PARA_NULL);
 
-    if(*SL_node == 0) {
-        return RET_ERROR;
-    }
+//     if(*SL_node == 0) {
+//         return RET_ERROR;
+//     }
 
-    int cur;
-    while (*SL_node != 0) {
-        /* code */
-        cur = space[*SL_node].cur;
+//     int cur;
+//     while (*SL_node != 0) {
+//         /* code */
+//         cur = space[*SL_node].cur;
 
-    }
+//     }
     
-}
+// }

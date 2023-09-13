@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.18.0)
 project(CMakeSeqList VERSION 0.0.1 LANGUAGES C CXX)
 
 aux_source_directory(. LINELINKLIST_SRC)

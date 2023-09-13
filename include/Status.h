@@ -17,7 +17,6 @@ extern "C" {
 #endif
 
 
-typedef unsigned int  RET_STATUS;
 
 WORD32 itemCompareEqual(int a, int b);
 

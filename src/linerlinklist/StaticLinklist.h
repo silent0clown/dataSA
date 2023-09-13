@@ -25,7 +25,7 @@ typedef struct
 }SLinkList[STATIC_LIST_MAX_SIZE];
 
 WORD32 dsa_InitStaticList(SLinkList space, WORD32* SL_node);
-WORD32 dsa_FreeStaticList(SLinkList space, WORD32* SL_node);
+// WORD32 dsa_FreeStaticList(SLinkList space, WORD32* SL_node);
 
 #ifdef __cplusplus
 }

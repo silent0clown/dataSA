@@ -16,7 +16,7 @@ extern "C" {
 #define    RET_OVERFLOW   (9)
 #define    RET_PARA_NULL  (10)
 #define    RET_PARA_FAIL  (11)
-
+typedef unsigned int  RET_STATUS;
 
 typedef  unsigned char      u_int8;       /* Unsigned 8  bit value */  
 typedef  unsigned short     u_int16;      /* Unsigned 16 bit value */  
