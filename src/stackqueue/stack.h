@@ -14,7 +14,7 @@ extern "C" {
 /* definiation */
 #define STACK_INIT_SIZE       1000
 #define STACK_INCREMENT_SIZE  20
-typedef unsigned int SEQ_ElemType;
+typedef char SEQ_ElemType;
 
 /* data struct */
 typedef struct SEQ_STACK {

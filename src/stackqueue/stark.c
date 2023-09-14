@@ -112,7 +112,7 @@ RET_STATUS dsa_PrintSeqStack(const SEQ_STACK* seq_node) {
     }
     printf("Stack elem is : ");
     while(tmp_node != seq_node->ptTop) {
-        printf("%d ", *tmp_node);
+        printf("%c", *tmp_node);
         tmp_node++;
     }
     printf("\n");
