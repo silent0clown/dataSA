@@ -41,7 +41,7 @@ bool dsa_IsEmptySeqStack(const SEQ_STACK* seq_node) {
     CHECK_NULL_RETURN_VALUE(seq_node, false);
     CHECK_NULL_RETURN_VALUE(seq_node->ptBase, false);
 
-    return seq_node->ptBase == seq_node->ptTop ? false : true;
+    return seq_node->ptBase == seq_node->ptTop ? true : false;
 }
  
 WORD32 dsa_GetSeqStackLen(const SEQ_STACK* seq_node) {
@@ -54,11 +54,8 @@ WORD32 dsa_GetSeqStackLen(const SEQ_STACK* seq_node) {
 RET_STATUS dsa_GetSeqStackTopElem(const SEQ_STACK* seq_node, SEQ_ElemType* data) {
     CHECK_NULL_RETURN_VALUE(seq_node, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(seq_node->ptBase, RET_PARA_NULL);
-    CHECK_NULL_RETURN_VALUE(data, RET_PARA_NULL);
 
-    SEQ_ElemType* tmp_node = seq_node->ptTop;
-    tmp_node--;
-    *data = *tmp_node;
+    *data = *(seq_node->ptTop - 1);
 
     return RET_SUCCESS;
 }
@@ -66,6 +63,18 @@ RET_STATUS dsa_GetSeqStackTopElem(const SEQ_STACK* seq_node, SEQ_ElemType* data)
 RET_STATUS dsa_PushToSeqStack(SEQ_STACK* seq_node, SEQ_ElemType data) {
     CHECK_NULL_RETURN_VALUE(seq_node, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(seq_node->ptBase, RET_PARA_NULL);
+
+    /* 推入过多 */
+    if(seq_node->ptTop - seq_node->ptBase >= seq_node->dwStackSize) {
+        seq_node->ptBase = (SEQ_ElemType *)realloc(seq_node->ptBase, (seq_node->dwStackSize + STACK_INCREMENT_SIZE) * sizeof(SEQ_ElemType));
+        if(unlikely(seq_node->ptBase == NULL)) {
+            DSA_PRINT_MSG("realloc node fail");
+            return RET_ERROR;
+        }
+
+        seq_node->dwStackSize += STACK_INCREMENT_SIZE;
+        seq_node->ptTop = seq_node->ptBase + seq_node->dwStackSize;
+    }
 
     *seq_node->ptTop = data;
     seq_node->ptTop ++;
@@ -76,7 +85,13 @@ RET_STATUS dsa_PushToSeqStack(SEQ_STACK* seq_node, SEQ_ElemType data) {
 RET_STATUS dsa_PopFromSeqStack(SEQ_STACK* seq_node, SEQ_ElemType* data) {
     CHECK_NULL_RETURN_VALUE(seq_node, RET_PARA_NULL);
     CHECK_NULL_RETURN_VALUE(seq_node->ptBase, RET_PARA_NULL);
-    CHECK_NULL_RETURN_VALUE(data, RET_PARA_NULL);
+
+    /* 考虑空栈 */
+    if(seq_node->ptBase == seq_node->ptTop) {
+        DSA_PRINT_MSG("Stack is empty");
+
+        return RET_ERROR;
+    }
 
     seq_node->ptTop--;
     *data = *seq_node->ptTop;
