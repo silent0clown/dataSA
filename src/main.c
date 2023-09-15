@@ -34,6 +34,10 @@ void test_InitSeqList()
 
 }
 
+int main() {
+    printf("test");
+}
+
 // void SeqStack_NumConvert(int32 i32InputNum, int32 i32Convert) {
 
 //     int32 i32Output = 0;
