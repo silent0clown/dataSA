@@ -68,7 +68,8 @@ else()
     add_subdirectory(src/linerlinklist)
     add_subdirectory(src/stackqueue)
     add_subdirectory(algorithm/Maze)
-#     add_subdirectory(src/c/nn)
+    add_subdirectory(algorithm/Expression)
+    add_subdirectory(algorithm/Hanoi)
 endif()
 
 # merge library
@@ -89,6 +90,11 @@ target_link_libraries(proc PRIVATE merge)
 add_executable(maze_proc algorithm/Maze/main_maze.c)
 target_link_libraries(maze_proc PRIVATE armaze)
 
+add_executable(expression_proc algorithm/Expression/expression_main.c)
+target_link_libraries(expression_proc PRIVATE armaze)
+
+add_executable(hanoi_proc algorithm/Hanoi/hanoi_main.c)
+target_link_libraries(hanoi_proc PRIVATE arhanoi)
 ##--------------------- Build unit tests -----------------------------------##
 option(CMAKE_TEMPLATE_ENABLE_TEST "Whether to enable unit tests" ON)
 if (CMAKE_TEMPLATE_ENABLE_TEST)
@@ -101,7 +107,8 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     test/test_SeqList.cpp 
     test/test_LinkList.cpp 
     test/test_doublelinklist.cpp
-    test/test_SeqStack.cpp)
+    test/test_SeqStack.cpp
+    test/test_Queue.cpp)
     target_link_libraries(test_LineList arseqlist arlinelinklist arstackqueue gtest gtest_main)
     add_test(NAME test_LineList COMMAND test_LineList)
 
