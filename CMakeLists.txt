@@ -38,11 +38,13 @@ add_definitions(-DDEBUG -DREAL_COOL_ENGINEER)
 #3.include directories
 include_directories(include)
 include_directories(src)
+include_directories(algorithm)
 
 
 # source files
 file(GLOB_RECURSE DATAALGOR_LIB_SRC
         src/*.c
+        algorithm/*.c
         )
 
 ##--------------------- Build target ---------------------------------------##
@@ -65,6 +67,7 @@ else()
     add_subdirectory(src/sequencelist)
     add_subdirectory(src/linerlinklist)
     add_subdirectory(src/stackqueue)
+    add_subdirectory(algorithm/Maze)
 #     add_subdirectory(src/c/nn)
 endif()
 
@@ -82,6 +85,9 @@ set_target_properties(merge PROPERTIES
 # Build demo executable
 add_executable(proc src/main.c)
 target_link_libraries(proc PRIVATE merge)
+
+add_executable(maze_proc algorithm/Maze/main_maze.c)
+target_link_libraries(maze_proc PRIVATE armaze)
 
 ##--------------------- Build unit tests -----------------------------------##
 option(CMAKE_TEMPLATE_ENABLE_TEST "Whether to enable unit tests" ON)
