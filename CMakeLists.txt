@@ -61,12 +61,14 @@ if (USE_IMPORTED_LIB)
     add_subdirectory(src/sequencelist)
     add_subdirectory(src/linerlinklist)
     add_subdirectory(src/stackqueue)
+    add_subdirectory(src/string)
 else()
     # Build  lib
     # 加入子模块
     add_subdirectory(src/sequencelist)
     add_subdirectory(src/linerlinklist)
     add_subdirectory(src/stackqueue)
+    add_subdirectory(src/string)
     add_subdirectory(algorithm/Maze)
     add_subdirectory(algorithm/Expression)
     add_subdirectory(algorithm/Hanoi)
@@ -74,8 +76,9 @@ endif()
 
 # merge library
 add_custom_command(OUTPUT libmerge.a
-COMMAND ar crsT libmerge.a $<TARGET_FILE:arseqlist> $<TARGET_FILE:arlinelinklist> $<TARGET_FILE:arstackqueue>
-DEPENDS arseqlist arlinelinklist arstackqueue)
+COMMAND ar crsT libmerge.a $<TARGET_FILE:arseqlist> $<TARGET_FILE:arlinelinklist> $<TARGET_FILE:arstackqueue> 
+$<TARGET_FILE:arstr>
+DEPENDS arseqlist arlinelinklist arstackqueue arstr)
 
 add_custom_target(_merge ALL DEPENDS libmerge.a)
 add_library(merge STATIC IMPORTED GLOBAL)
@@ -109,7 +112,7 @@ if (CMAKE_TEMPLATE_ENABLE_TEST)
     test/test_doublelinklist.cpp
     test/test_SeqStack.cpp
     test/test_Queue.cpp)
-    target_link_libraries(test_LineList arseqlist arlinelinklist arstackqueue gtest gtest_main)
+    target_link_libraries(test_LineList arseqlist arlinelinklist arstackqueue arstr gtest gtest_main)
     add_test(NAME test_LineList COMMAND test_LineList)
 
 

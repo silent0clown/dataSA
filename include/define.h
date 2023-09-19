@@ -8,8 +8,17 @@ extern "C" {
 
 #pragma GCC system_header   // 允许可变参数宏
 #define CHECK_NULL_RETURN_VALUE(PTR, VAL){if(NULL == (PTR)){return VAL;}}
-#define  MAX(x,y) ((x)>(y)) ? (x):(y))  
-#define  MIN(x,y) ((x)<(y)) ? (x):(y)) 
+#define  MAX(x,y) (((x)>(y)) ? (x):(y))  
+#define  MIN(x,y) (((x)<(y)) ? (x):(y)) 
+
+//
+#define INT_EQ(a, b) ((a) == (b))
+#define INT_LT(a, b) ((a) < (b))
+#define INT_LQ(a, b) ((a) <= (b))
+
+#define CHAR_EQ(a, b) (!strcmp((a), (b)))
+#define CHAR_LT(a, b) (strcmp((a), (b)) < 0)
+#define CHAR_LQ(a, b) (strcmp((a), (b)) <= 0)
 
 #define    RET_ERROR      (1)
 #define    RET_SUCCESS    (0)
